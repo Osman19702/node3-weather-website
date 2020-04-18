@@ -12,7 +12,8 @@ const forecast = (latitude,longitude,callback) => {
             callback('Unable to find location',undefined)
 
         }else{
-            callback(undefined,body.current.temp)
+            callback(undefined,
+            body.current.temp +' is current temperature.' +' Lowest temperature today is '+ body.daily[0].temp.min + '. Highest temperature today is '+ body.daily[0].temp.max + '.')
 
         }
 
